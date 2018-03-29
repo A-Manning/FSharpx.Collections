@@ -449,7 +449,7 @@ module List =
             pad (total - List.length list) elem list
       
     /// The catOptions function takes a list of Options and returns a list of all the Some values.
-    let inline catOptions (xs:Option<'a> list) = List.choose id
+    let inline catOptions : Option<'a> list -> 'a list = List.choose id
 
     /// Extracts from a list of Choice all the Choice1Of2 elements. All the Choice1Of2 elements are extracted in order.
     let inline choice1s xs =
